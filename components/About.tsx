@@ -37,7 +37,7 @@ const About: React.FC = () => {
                 className="relative"
             >
                 <img
-                    src="https://aistudio.google.com/500494f0-eb63-41f8-b908-22823afc4df1"
+                    src="Generated Image November 05, 2025 - 6_27PM (2).png"
                     alt="An illustration of Dr. Sheryar"
                     className="w-full max-w-xs h-auto rounded-lg shadow-lg border-2 border-border/50"
                 />
