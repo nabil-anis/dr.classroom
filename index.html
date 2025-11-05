@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF--8" />
+    <link rel="icon" type="image/png" href="https://storage.googleapis.com/garden-prod/_matt_aic_user_images/40f69542-a1b7-44a7-85b4-22b069d35cb6.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr Sheryar's Classroom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              border: "hsl(var(--border))",
+              input: "hsl(var(--input))",
+              ring: "hsl(var(--ring))",
+              background: "hsl(var(--background))",
+              foreground: "hsl(var(--foreground))",
+              primary: {
+                DEFAULT: "hsl(var(--primary))",
+                foreground: "hsl(var(--primary-foreground))",
+              },
+              secondary: {
+                DEFAULT: "hsl(var(--secondary))",
+                foreground: "hsl(var(--secondary-foreground))",
+              },
+              destructive: {
+                DEFAULT: "hsl(var(--destructive))",
+                foreground: "hsl(var(--destructive-foreground))",
+              },
+              muted: {
+                DEFAULT: "hsl(var(--muted))",
+                foreground: "hsl(var(--muted-foreground))",
+              },
+              accent: {
+                DEFAULT: "hsl(var(--accent))",
+                foreground: "hsl(var(--accent-foreground))",
+              },
+              'accent-2': {
+                DEFAULT: "hsl(var(--accent-2))",
+              },
+              popover: {
+                DEFAULT: "hsl(var(--popover))",
+                foreground: "hsl(var(--popover-foreground))",
+              },
+              card: {
+                DEFAULT: "hsl(var(--card))",
+                foreground: "hsl(var(--card-foreground))",
+              },
+              'brand-red': '#E53935',
+              'brand-charcoal': '#111111',
+              'brand-charcoal-light': '#1A1A1A',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Source Serif 4', 'serif'],
+            },
+            borderRadius: {
+              lg: `var(--radius)`,
+              md: `calc(var(--radius) - 2px)`,
+              sm: "calc(var(--radius) - 4px)",
+            },
+            keyframes: {
+               "subtle-glow": {
+                '0%, 100%': { boxShadow: '0 0 15px -5px rgba(229, 57, 53, 0.4)' },
+                '50%': { boxShadow: '0 0 15px -5px rgba(229, 57, 53, 0.8)' },
+              }
+            },
+            animation: {
+              'subtle-glow': 'subtle-glow 3s infinite ease-in-out',
+            },
+          },
+        },
+      }
+    </script>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..30,400;600;700&display=swap" rel="stylesheet">
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 5rem; /* 80px offset for fixed navbar */
+      }
+       :root {
+        --radius: 0.5rem;
+        /* Light Theme (Maintained but dark is default) */
+        --background: 0 0% 100%;
+        --foreground: 222 22% 16%;
+        --card: 0 0% 98%;
+        --card-foreground: 222 22% 16%;
+        --popover: 0 0% 98%;
+        --popover-foreground: 222 22% 16%;
+        --primary: 1 79% 56%;
+        --primary-foreground: 210 40% 98%;
+        --secondary: 220 9% 46%;
+        --secondary-foreground: 0 0% 100%;
+        --muted: 220 9% 80%;
+        --muted-foreground: 220 9% 40%;
+        --accent: 220 9% 88%;
+        --accent-foreground: 222 22% 16%;
+        --accent-2: 43 74% 49%; /* Gold */
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 220 13% 85%;
+        --input: 220 13% 85%;
+        --ring: 1 79% 56%;
+      }
+      .dark {
+        /* Dark Theme - Digital Chalkboard */
+        --background: 220 10% 9%; /* Very dark blue/charcoal */
+        --foreground: 0 0% 90%;
+        --card: 220 10% 12%;
+        --card-foreground: 0 0% 90%;
+        --popover: 220 10% 9%;
+        --popover-foreground: 0 0% 90%;
+        --primary: 1 79% 56%;
+        --primary-foreground: 210 40% 98%;
+        --secondary: 0 0% 15%;
+        --secondary-foreground: 0 0% 90%;
+        --muted: 0 0% 20%;
+        --muted-foreground: 0 0% 55%;
+        --accent: 0 0% 15%;
+        --accent-foreground: 0 0% 90%;
+        --accent-2: 38 92% 70%; /* Muted Gold */
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 0 0% 15%;
+        --input: 0 0% 15%;
+        --ring: 1 79% 56%;
+      }
+      body {
+        /* Subtle pattern for light mode */
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='a' width='10' height='10' patternUnits='userSpaceOnUse'%3E%3Cpath d='M2 5h6M5 2v6' stroke-width='1' stroke-linecap='square' stroke='%23f1f5f9' fill='none'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23a)'/%3E%3C/svg%3E");
+      }
+      .dark body {
+        background-color: hsl(var(--background));
+        background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23262626" fill-opacity="0.2"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.417.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^11.3.19",
+    "clsx": "https://aistudiocdn.com/clsx@^2.1.1",
+    "tailwind-merge": "https://aistudiocdn.com/tailwind-merge@^2.4.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-background text-foreground">
+    <div id="root"></div>
+  </body>
+</html>
